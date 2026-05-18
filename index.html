@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đề thi thử THPT số 1 Sở Hà Nội 2026</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; max-width: 950px; margin: 0 auto; padding: 20px; background-color: #f0f2f5; color: #333; }
+        .page { display: none; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin-bottom: 20px; }
+        .active { display: block; }
+        h1, h2 { color: #1a73e8; text-align: center; text-transform: uppercase; margin-bottom: 10px; }
+        .section-title { color: #e67e22; font-weight: bold; border-bottom: 2px solid #e67e22; padding-bottom: 5px; margin: 30px 0 15px 0; text-transform: uppercase; }
+        .passage { background: #f8f9fa; border-left: 6px solid #1a73e8; padding: 20px; margin: 20px 0; white-space: pre-wrap; text-align: justify; border-radius: 0 8px 8px 0; }
+        .question { margin-bottom: 30px; padding: 15px; border-bottom: 1px solid #eee; }
+        .options { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 15px; }
+        .option { padding: 12px; border: 2px solid #e0e0e0; border-radius: 8px; cursor: pointer; transition: all 0.2s; background: #fff; }
+        .option:hover:not(.locked) { border-color: #1a73e8; background: #f1f7fe; }
+        .correct { background-color: #d4edda !important; border-color: #28a745 !important; color: #155724; font-weight: bold; }
+        .incorrect { background-color: #f8d7da !important; border-color: #dc3545 !important; color: #721c24; }
+        .locked { cursor: default; pointer-events: none; opacity: 0.9; }
+        .nav-btns { display: flex; justify-content: space-between; margin-top: 30px; }
+        button { padding: 12px 25px; cursor: pointer; background-color: #1a73e8; color: white; border: none; border-radius: 6px; font-weight: bold; font-size: 16px; }
+        button:hover { background-color: #1557b0; }
+        input[type="text"] { width: 100%; padding: 12px; margin: 15px 0; border: 2px solid #ddd; border-radius: 6px; font-size: 16px; box-sizing: border-box; }
+        .full-text-box { background: #fffde7; padding: 15px; border: 1px dashed #fbc02d; border-radius: 8px; margin-top: 10px; font-size: 0.95em; line-height: 1.8; }
+        @media (max-width: 600px) { .options { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+    <div id="page-welcome" class="page active">
+        <h1>SỞ GIÁO DỤC VÀ ĐÀO TẠO HÀ NỘI</h1>
+        <h2>ĐỀ THI THỬ CỤM TRƯỜNG THPT SỐ 1 - 2026</h2>
+        <div style="margin-top: 50px; text-align: center;">
+            <p>Vui lòng nhập họ tên học sinh để bắt đầu bài thi:</p>
+            <input type="text" id="student-name" placeholder="Nhập tên của bạn...">
+            <button onclick="startQuiz()" style="width: 200px; margin-top: 10px;">BẮT ĐẦU</button>
+        </div>
+    </div>
+
+    <div id="page-1" class="page">
+        <div class="section-title">PHẦN I. ĐỌC HIỂU (PASSAGE 1)</div>
+        <div class="passage">
+Entrepreneurship in multicultural environments offers unique perspectives for business development. These diverse settings bring together people with different backgrounds, languages, and cultural values, creating dynamic marketplaces for innovative ideas. Entrepreneurs operating across cultural boundaries must navigate unfamiliar business practices while <b>leveraging</b> their distinct backgrounds. This cultural exchange often leads to creative solutions that might not emerge in homogeneous environments.
+
+Despite the advantages, entrepreneurs face significant challenges when operating in multicultural contexts. Communication barriers frequently arise when team members speak different languages or interpret messages differently. Cultural misunderstandings about business etiquette, negotiation styles, and decision-making processes can hinder progress and create tension. Additionally, regulatory differences between countries require entrepreneurs to adapt <b>their</b> business models and comply with various legal frameworks, which can be costly and time-consuming.
+
+On the other hand, multicultural environments present valuable opportunities for growth and innovation. Diverse teams typically demonstrate enhanced problem-solving capabilities by approaching challenges from multiple perspectives. Access to international markets allows entrepreneurs to scale their businesses beyond local limitations. Furthermore, multicultural entrepreneurs often identify <b>untapped</b> market needs that competitors might overlook. These opportunities enable businesses to develop products and services that address specific cultural preferences while maintaining universal appeal.
+
+<u>To succeed in multicultural settings, entrepreneurs must develop cultural intelligence and adaptability.</u> This includes learning about different cultural norms, practicing active listening, and remaining flexible when unexpected situations arise. Building diverse networks helps entrepreneurs access local knowledge and establish credibility in new markets. Those who embrace cultural differences rather than merely tolerating them position themselves to thrive in our increasingly interconnected global economy.
+        </div>
+
+        <div class="question" data-ans="D"><p><b>Question 1.</b> Which of the following is NOT mentioned as a challenge for entrepreneurs in multicultural environments?</p><div class="options"><div class="option" onclick="check(this, 'A')">A. cultural misunderstandings</div><div class="option" onclick="check(this, 'B')">B. communication barriers</div><div class="option" onclick="check(this, 'C')">C. regulatory differences</div><div class="option" onclick="check(this, 'D')">D. financial constraints</div></div></div>
+        <div class="question" data-ans="D"><p><b>Question 2.</b> The word "<b>leveraging</b>" in paragraph 1 is OPPOSITE in meaning to</p><div class="options"><div class="option" onclick="check(this, 'A')">A. utilizing</div><div class="option" onclick="check(this, 'B')">B. enhancing</div><div class="option" onclick="check(this, 'C')">C. developing</div><div class="option" onclick="check(this, 'D')">D. ignoring</div></div></div>
+        <div class="question" data-ans="D"><p><b>Question 3.</b> The word "<b>their</b>" in paragraph 2 refers to</p><div class="options"><div class="option" onclick="check(this, 'A')">A. business models</div><div class="option" onclick="check(this, 'B')">B. legal frameworks</div><div class="option" onclick="check(this, 'C')">C. countries</div><div class="option" onclick="check(this, 'D')">D. entrepreneurs</div></div></div>
+        <div class="question" data-ans="B"><p><b>Question 4.</b> The word "<b>untapped</b>" in paragraph 3 could be best replaced by</p><div class="options"><div class="option" onclick="check(this, 'A')">A. limited</div><div class="option" onclick="check(this, 'B')">B. unexploited</div><div class="option" onclick="check(this, 'C')">C. traditional</div><div class="option" onclick="check(this, 'D')">D. competitive</div></div></div>
+        <div class="question" data-ans="A"><p><b>Question 5.</b> Which of the following best paraphrases the <u>underlined sentence</u> in paragraph 4?</p><div class="options">
+            <div class="option" onclick="check(this, 'A')">A. Entrepreneurs who thrive across cultures typically acquire skills related to understanding and adjusting to different norms.</div>
+            <div class="option" onclick="check(this, 'B')">B. Multicultural business settings generally eliminate the need for entrepreneurs to develop flexible cultural approaches.</div>
+            <div class="option" onclick="check(this, 'C')">C. Successful entrepreneurs primarily focus on technical expertise rather than developing cultural awareness or flexibility.</div>
+            <div class="option" onclick="check(this, 'D')">D. Cultural intelligence and adaptability prevent entrepreneurs from achieving success in diverse market environments.</div>
+        </div></div>
+        <div class="question" data-ans="C"><p><b>Question 6.</b> Which of the following is TRUE according to the passage?</p><div class="options">
+            <div class="option" onclick="check(this, 'A')">A. Regulatory frameworks across different countries typically present minimal challenges for international entrepreneurs.</div>
+            <div class="option" onclick="check(this, 'B')">B. Entrepreneurs who merely tolerate cultural differences tend to outperform those who actively embrace diversity.</div>
+            <div class="option" onclick="check(this, 'C')">C. Diverse teams demonstrate enhanced problem-solving capabilities by approaching challenges from multiple perspectives.</div>
+            <div class="option" onclick="check(this, 'D')">D. Homogeneous business environments generally produce more innovative solutions than multicultural settings do.</div>
+        </div></div>
+        <div class="question" data-ans="D"><p><b>Question 7.</b> In which paragraph does the writer mention the challenges entrepreneurs face in a multicultural context?</p><div class="options"><div class="option" onclick="check(this, 'A')">A. Paragraph 3</div><div class="option" onclick="check(this, 'B')">B. Paragraph 4</div><div class="option" onclick="check(this, 'C')">C. Paragraph 1</div><div class="option" onclick="check(this, 'D')">D. Paragraph 2</div></div></div>
+        <div class="question" data-ans="C"><p><b>Question 8.</b> In which paragraph does the writer mention what is important for entrepreneurial success in multicultural environments?</p><div class="options"><div class="option" onclick="check(this, 'A')">A. Paragraph 3</div><div class="option" onclick="check(this, 'B')">B. Paragraph 1</div><div class="option" onclick="check(this, 'C')">C. Paragraph 4</div><div class="option" onclick="check(this, 'D')">D. Paragraph 2</div></div></div>
+        <div class="nav-btns"><span></span><button onclick="nextPage(2)">Tiếp theo</button></div>
+    </div>
+
+    <div id="page-2" class="page">
+        <div class="section-title">PHẦN II. ADVERTISEMENT</div>
+        <div class="passage">
+<b>Your Blueprint to Becoming a Knowledge Ninja</b>
+Are you ready to transform your learning journey?
+➤ Effective learning (9) ____ and powerful techniques await you in this revolutionary course. Our advanced memory techniques will supercharge your learning potential. The techniques (10) ____ in this program guarantee remarkable results.
+➤ Our instructors will provide you (11) ____ expert guidance. When it comes to mastering new skills, practice (12) ____ perfect! We encourage you (13) ____ mastering the art of efficient learning today.
+Join us now and discover how to learn anything faster and more effectively. Our comprehensive course includes (14) ____, time management tactics, and memory enhancement techniques. You'll learn how to break down complex subjects into manageable chunks, develop strong retention skills, and build lasting knowledge.
+        </div>
+        <div class="question" data-ans="B"><p><b>Question 9.</b></p><div class="options"><div class="option" onclick="check(this, 'A')">A. strategize</div><div class="option" onclick="check(this, 'B')">B. strategies</div><div class="option" onclick="check(this, 'C')">C. unstrategic</div><div class="option" onclick="check(this, 'D')">D. strategic</div></div></div>
+        <div class="question" data-ans="B"><p><b>Question 10.</b></p><div class="options"><div class="option" onclick="check(this, 'A')">A. which used</div><div class="option" onclick="check(this, 'B')">B. used</div><div class="option" onclick="check(this, 'C')">C. was used</div><div class="option" onclick="check(this, 'D')">D. using</div></div></div>
+        <div class="question" data-ans="A"><p><b>Question 11.</b></p><div class="options"><div class="option" onclick="check(this, 'A')">A. with</div><div class="option" onclick="check(this, 'B')">B. to</div><div class="option" onclick="check(this, 'C')">C. on</div><div class="option" onclick="check(this, 'D')">D. for</div></div></div>
+        <div class="question" data-ans="A"><p><b>Question 12.</b></p><div class="options"><div class="option" onclick="check(this, 'A')">A. makes</div><div class="option" onclick="check(this, 'B')">B. hands</div><div class="option" onclick="check(this, 'C')">C. takes</div><div class="option" onclick="check(this, 'D')">D. brings</div></div></div>
+        <div class="question" data-ans="B"><p><b>Question 13.</b></p><div class="options"><div class="option" onclick="check(this, 'A')">A. to starting</div><div class="option" onclick="check(this, 'B')">B. to start</div><div class="option" onclick="check(this, 'C')">C. starting</div><div class="option" onclick="check(this, 'D')">D. start</div></div></div>
+        <div class="question" data-ans="A"><p><b>Question 14.</b></p><div class="options"><div class="option" onclick="check(this, 'A')">A. proven study methods</div><div class="option" onclick="check(this, 'B')">B. proven methods study</div><div class="option" onclick="check(this, 'C')">C. study methods proven</div><div class="option" onclick="check(this, 'D')">D. methods proven study</div></div></div>
+        <div class="nav-btns"><button onclick="nextPage(1)">Quay lại</button><button onclick="nextPage(3)">Tiếp theo</button></div>
+    </div>
+
+    <div id="page-3" class="page">
+        <div class="section-title">PHẦN III. ĐỌC HIỂU (PASSAGE 2)</div>
+        <div class="passage">
+[I] Climatic perturbations constitute humanity's most formidable ecological adversity, fundamentally transmuting atmospheric compositional parameters whilst simultaneously disrupting photosynthetic mechanisms that perpetuate terrestrial biotopes. [II] As planetary thermal indices escalate and carbon dioxide concentrations attain unprecedented thresholds, botanical physiology undergoes multifaceted adaptations that permeate throughout trophic hierarchies. [III] The labyrinthine correlation between climatic variables and photosynthetic efficacy determines planetary oxygen synthesis and carbon sequestration capabilities. [IV]
+
+Photosynthesis, the biochemical cornerstone of terrestrial vitality, exhibits extraordinary susceptibility to environmental oscillations. Elevated atmospheric carbon dioxide initially augments photosynthetic velocities through enhanced substrate bioavailability, a phenomenon scientists denominate the "CO2 fertilization paradigm." Nevertheless, this ostensible advantageous outcome attenuates expeditiously as <b>constraining</b> parameters including nitrogen bioavailability, hydric stress, and thermal extremes circumscribe botanical proliferation. The sanguine prognostications of enhanced botanical productivity under elevated CO2 scenarios have proven predominantly chimerical when contemplating authentic ecological limitations.
+
+Thermal extremities impose particularly acute menaces to photosynthetic apparatus. Hyperthermia compromises pivotal enzymes implicated in carbon sequestration, whilst excessive temperatures disrupt chloroplast architecture and diminish photosystem operational capacity. Conversely, protracted hypothermic periods inhibit enzymatic catalysis and constrain metabolic processes indispensable for botanical survival. <b>These</b> thermal disruptions precipitate cascading ramifications throughout ecosystems, affecting primary productivity whilst subsequently influencing herbivorous demographics and predator-prey equilibriums.
+
+Hydric accessibility increasingly governs photosynthetic processes under fluctuating climatic parameters. Drought-induced stress compels botanical organisms to occlude stomatal apertures for water conservation, concurrently restricting carbon dioxide assimilation requisite for photosynthesis. <u>This physiological dichotomy between hydric preservation and carbon incorporation becomes progressively problematic as precipitation configurations become increasingly <b>capricious</b> and meteorological extremities intensify.</u> Furthermore, modified precipitation regimes influence pedological nutrient cycling, subsequently <b>constraining</b> photosynthetic capacity and ecosystemic productivity.
+        </div>
+        <div class="question" data-ans="A"><p><b>Question 15.</b> Where in paragraph 1 does the sentence best fit? <br><i>"These cascading ecological consequences will reverberate through biospheric systems for millennia."</i></p><div class="options"><div class="option" onclick="check(this, 'A')">A. [II]</div><div class="option" onclick="check(this, 'B')">B. [IV]</div><div class="option" onclick="check(this, 'C')">C. [III]</div><div class="option" onclick="check(this, 'D')">D. [I]</div></div></div>
+        <div class="question" data-ans="A"><p><b>Question 16.</b> According to paragraph 2, which of the following is NOT mentioned as a constraining parameter for botanical proliferation under elevated CO2?</p><div class="options"><div class="option" onclick="check(this, 'A')">A. pedological pH coefficient variations</div><div class="option" onclick="check(this, 'B')">B. nitrogen bioavailability limitations</div><div class="option" onclick="check(this, 'C')">C. thermal extremity fluctuations</div><div class="option" onclick="check(this, 'D')">D. hydric stress manifestations</div></div></div>
+        <div class="question" data-ans="C"><p><b>Question 17.</b> Which of the following best summarises paragraph 3?</p><div class="options">
+            <div class="option" onclick="check(this, 'A')">A. Thermal disruptions affect photosynthetic apparatus, particularly enzymes and chloroplasts, necessitating immediate technological intervention for ecosystemic restoration.</div>
+            <div class="option" onclick="check(this, 'B')">B. The most substantial menace to photosynthesis is thermal variation, which affects enzymatic function yet rarely influences broader ecosystemic dynamics.</div>
+            <div class="option" onclick="check(this, 'C')">C. Hyperthermia and hypothermia severely disrupt photosynthetic processes, compromising pivotal enzymes whilst precipitating cascading ecosystemic ramifications.</div>
+            <div class="option" onclick="check(this, 'D')">D. Thermal extremities compromise photosynthetic enzymes and chloroplast architectures, yet botanical organisms can effortlessly adapt through evolutionary mechanisms.</div>
+        </div></div>
+        <div class="question" data-ans="C"><p><b>Question 18.</b> The word "<b>these</b>" in paragraph 3 refers to</p><div class="options"><div class="option" onclick="check(this, 'A')">A. processes</div><div class="option" onclick="check(this, 'B')">B. temperatures</div><div class="option" onclick="check(this, 'C')">C. disruptions</div><div class="option" onclick="check(this, 'D')">D. enzymes</div></div></div>
+        <div class="question" data-ans="C"><p><b>Question 19.</b> The word "<b>capricious</b>" in paragraph 4 is OPPOSITE in meaning to</p><div class="options"><div class="option" onclick="check(this, 'A')">A. intensive</div><div class="option" onclick="check(this, 'B')">B. frequent</div><div class="option" onclick="check(this, 'C')">C. predictable</div><div class="option" onclick="check(this, 'D')">D. beneficial</div></div></div>
+        <div class="question" data-ans="B"><p><b>Question 20.</b> Which of the following best paraphrases the <u>underlined sentence</u> in paragraph 4?</p><div class="options">
+            <div class="option" onclick="check(this, 'A')">A. Botanical organisms confront progressively problematic dichotomies between hydric preservation and carbon assimilation during predictable meteorological conditions.</div>
+            <div class="option" onclick="check(this, 'B')">B. Botanical organisms must equilibrate hydric retention with carbon dioxide assimilation, which becomes increasingly arduous as meteorological conditions become unpredictable.</div>
+            <div class="option" onclick="check(this, 'C')">C. Hydric conservation and carbon dioxide assimilation engender physiological conflicts that intensify during meteorological extremes.</div>
+            <div class="option" onclick="check(this, 'D')">D. The physiological equilibrium between hydric conservation and carbon assimilation engenders progressively arduous challenges only when meteorological configurations become stable.</div>
+        </div></div>
+        <div class="question" data-ans="A"><p><b>Question 21.</b> The word "<b>constraining</b>" in paragraph 4 mostly means</p><div class="options"><div class="option" onclick="check(this, 'A')">A. circumscribing</div><div class="option" onclick="check(this, 'B')">B. quantifying</div><div class="option" onclick="check(this, 'C')">C. facilitating</div><div class="option" onclick="check(this, 'D')">D. augmenting</div></div></div>
+        <div class="question" data-ans="D"><p><b>Question 22.</b> Which of the following is TRUE according to the passage?</p><div class="options">
+            <div class="option" onclick="check(this, 'A')">A. Thermal extremities exclusively benefit photosynthetic processes through enhanced enzymatic catalysis.</div>
+            <div class="option" onclick="check(this, 'B')">B. The CO2 fertilization paradigm provides sustained advantageous outcomes despite environmental constraining parameters.</div>
+            <div class="option" onclick="check(this, 'C')">C. Elevated atmospheric CO2 consistently augments botanical productivity across all environmental parameters universally.</div>
+            <div class="option" onclick="check(this, 'D')">D. Hyperthermia can compromise pivotal enzymes implicated in photosynthetic carbon sequestration processes.</div>
+        </div></div>
+        <div class="question" data-ans="C"><p><b>Question 23.</b> Which of the following can be inferred from the passage?</p><div class="options">
+            <div class="option" onclick="check(this, 'A')">A. Hydric accessibility exerts minimal influence on photosynthetic efficacy compared to thermal and CO2 parameters.</div>
+            <div class="option" onclick="check(this, 'B')">B. Elevated carbon dioxide concentrations universally augment botanical productivity irrespective of alternative environmental constraints.</div>
+            <div class="option" onclick="check(this, 'C')">C. Climatic perturbation impacts on photosynthesis engender multifaceted, interconnected ramifications throughout ecological systems necessitating comprehensive mitigation strategies.</div>
+            <div class="option" onclick="check(this, 'D')">D. Photosynthetic processes remain substantially unaffected by climatic perturbations due to botanical organisms' extraordinary adaptability.</div>
+        </div></div>
+        <div class="question" data-ans="C"><p><b>Question 24.</b> Which of the following best summarises the passage?</p><div class="options">
+            <div class="option" onclick="check(this, 'A')">A. Climatic perturbations affect photosynthesis primarily through thermal variations and hydric stress, with elevated CO2 providing consistent advantageous outcomes for botanical proliferation.</div>
+            <div class="option" onclick="check(this, 'B')">B. Atmospheric CO2 augmentations enhance botanical productivity substantially, whilst thermal extremities and drought engender provisional setbacks in photosynthetic efficacy.</div>
+            <div class="option" onclick="check(this, 'C') (DÚNG)">C. Climatic perturbations fundamentally transmute photosynthetic processes through elevated CO2, thermal extremities, and hydric stress, engendering multifaceted disruptions despite initial CO2 fertilization advantageous outcomes.</div>
+            <div class="option" onclick="check(this, 'D')">D. Photosynthesis demonstrates extraordinary adaptation to climatic perturbations through the CO2 fertilization paradigm, though thermal and hydric constraints pose negligible challenges.</div>
+        </div></div>
+        <div class="nav-btns"><button onclick="nextPage(2)">Quay lại</button><button onclick="nextPage(4)">Tiếp theo</button></div>
+    </div>
+
+    <div id="page-4" class="page">
+        <div class="section-title">PHẦN IV. CLOZE TEST & LEAFLET</div>
+        <div class="passage">
+In today's hyperconnected society, the constant presence of smartphones, laptops, and social media platforms has blurred the line between work and leisure. Notifications appear at all hours, (25) ____, and endless scrolling quietly consumes time that might otherwise be devoted to rest or reflection. A digital detox—the deliberate break from screens and online interactions—has therefore become more than a passing trend. It is increasingly viewed as a response to digital fatigue, a phenomenon marked by anxiety, distraction, and reduced concentration.
+
+Moreover, the benefits of such a detox can be surprisingly tangible. Individuals often report improved sleep, stronger focus, (26) ____. Families, too, notice changes: conversations become livelier, meals last longer, and shared activities regain importance. (27) ____. Yet challenges remain. Because technology is woven into education, employment, and entertainment, many find it difficult to disconnect fully, and some fear that missing updates could cost them social connections or jobs.
+
+Nevertheless, short digital breaks, though modest, can offer remarkable relief. Weekend retreats in nature, where phones are left behind, remind people of slower rhythms. Workplaces, by introducing "no-email evenings" and regulations (28) ____, encourage healthier boundaries. Even small choices—silencing notifications, setting screen-time limits, or designating phone-free hours—help reclaim attention. A digital detox, once dismissed as impractical, is now being reconsidered as a vital practice, a safeguard against overload and a path towards mindful living. Ultimately, it shows that (29) ____.
+        </div>
+        <div class="question" data-ans="C"><p><b>Question 25.</b></p><div class="options"><div class="option" onclick="check(this, 'A')">A. replies demand emails instantly</div><div class="option" onclick="check(this, 'B')">B. how to reply emails instantly</div><div class="option" onclick="check(this, 'C')">C. emails demand instant replies</div><div class="option" onclick="check(this, 'D')">D. the demand of instant email replies</div></div></div>
+        <div class="question" data-ans="C"><p><b>Question 26.</b></p><div class="options"><div class="option" onclick="check(this, 'A')">A. or more unstable emotions over time</div><div class="option" onclick="check(this, 'B')">B. yet an increasingly stable condition of emotions</div><div class="option" onclick="check(this, 'C')">C. and a heightened sense of emotional stability</div><div class="option" onclick="check(this, 'D')">D. however, their stability of emotion is becoming greater and greater</div></div></div>
+        <div class="question" data-ans="A"><p><b>Question 27.</b></p><div class="options"><div class="option" onclick="check(this, 'A')">A. In fact, stepping away from digital devices reduces stress, strengthens bonds, restores balance, and revives creativity.</div><div class="option" onclick="check(this, 'B')">B. In general, digital devices can not escalate our stress, make our generation gaps bigger.</div><div class="option" onclick="check(this, 'C')">C. At the same time, reducing stress, strengthening bonds, restoring balance, and reviving creativity result in stepping away from digital devices.</div><div class="option" onclick="check(this, 'D')">D. For example, stepping away from digital devices neither reduces stress nor strengthens bonds, restores balance, and revives creativity.</div></div></div>
+        <div class="question" data-ans="D"><p><b>Question 28.</b></p><div class="options"><div class="option" onclick="check(this, 'A')">A. requiring face-to-face interactions with each other frequently</div><div class="option" onclick="check(this, 'B')">B. require face-to-face interactions with each other habitually</div><div class="option" onclick="check(this, 'C')">C. face-to-face interactions will be regularly required</div><div class="option" onclick="check(this, 'D')">D. required face-to-face interactions consistently</div></div></div>
+        <div class="question" data-ans="C"><p><b>Question 29.</b></p><div class="options"><div class="option" onclick="check(this, 'A')">A. whether technology is fundamental or rest, reflection, and human connection are vital</div><div class="option" onclick="check(this, 'B')">B. either the vitality of technology reflected in rest or human connection is equally essential</div><div class="option" onclick="check(this, 'C')">C. not only is technology crucial but rest, reflection, and human connection are imperative as well</div><div class="option" onclick="check(this, 'D')">D. technology is very important; as a result, rest, reflection, and human connection are equally indispensable</div></div></div>
+
+        <div class="section-title">VOLUNTEER TODAY!</div>
+        <div class="passage">
+<b>Make a Difference - Volunteer Today!</b>
+Let's look at how volunteering can change lives and improve our community.
+Facts and Figures: Did you know that millions of people volunteer every year? Volunteers help in hospitals, schools, animal (30) ____, and community centers. They bring people together, improve lives, and support those in need. Studies (31) ____ that people who volunteer feel happier and more connected to their (32) ____.
+<b>Positive Actions!</b>
+• Find a cause you care about. (33) ____ it's helping children, protecting the environment, or caring for animals, there are many ways to get involved.
+• Start small and be consistent. Even a few hours a month can make a big (34) ____. Volunteering regularly helps build trust and strong connections with those you help.
+• Learn new skills and meet (35) ____ people. Volunteering is a great way to gain experience and make friends, all while helping others.
+        </div>
+        <div class="question" data-ans="C"><p><b>Question 30.</b></p><div class="options"><div class="option" onclick="check(this, 'A')">A. accommodations</div><div class="option" onclick="check(this, 'B')">B. houses</div><div class="option" onclick="check(this, 'C')">C. shelters</div><div class="option" onclick="check(this, 'D')">D. apartments</div></div></div>
+        <div class="question" data-ans="D"><p><b>Question 31.</b></p><div class="options"><div class="option" onclick="check(this, 'A')">A. give up</div><div class="option" onclick="check(this, 'B')">B. go over</div><div class="option" onclick="check(this, 'C')">C. look up</div><div class="option" onclick="check(this, 'D')">D. point out</div></div></div>
+        <div class="question" data-ans="A"><p><b>Question 32.</b></p><div class="options"><div class="option" onclick="check(this, 'A')">A. communities</div><div class="option" onclick="check(this, 'B')">B. encouragements</div><div class="option" onclick="check(this, 'C')">C. environments</div><div class="option" onclick="check(this, 'D')">D. facilities</div></div></div>
+        <div class="question" data-ans="C"><p><b>Question 33.</b></p><div class="options"><div class="option" onclick="check(this, 'A')">A. Until</div><div class="option" onclick="check(this, 'B')">B. Although</div><div class="option" onclick="check(this, 'C')">C. Whether</div><div class="option" onclick="check(this, 'D')">D. Because</div></div></div>
+        <div class="question" data-ans="B"><p><b>Question 34.</b></p><div class="options"><div class="option" onclick="check(this, 'A')">A. importance</div><div class="option" onclick="check(this, 'B')">B. difference</div><div class="option" onclick="check(this, 'C')">C. significance</div><div class="option" onclick="check(this, 'D')">D. similarity</div></div></div>
+        <div class="question" data-ans="A"><p><b>Question 35.</b></p><div class="options"><div class="option" onclick="check(this, 'A')">A. other</div><div class="option" onclick="check(this, 'B')">B. others</div><div class="option" onclick="check(this, 'C')">C. the other</div><div class="option" onclick="check(this, 'D')">D. another</div></div></div>
+        <div class="nav-btns"><button onclick="nextPage(3)">Quay lại</button><button onclick="nextPage(5)">Tiếp theo</button></div>
+    </div>
+
+    <div id="page-5" class="page">
+        <div class="section-title">PHẦN V. SẮP XẾP ĐOẠN VĂN</div>
+        
+        <div class="question" data-ans="A">
+            <p><b>Question 36. Mark the best arrangement of utterances:</b></p>
+            <div class="full-text-box">
+                a. Sarah: That sounds interesting! I've never been hiking before. Is it difficult?<br>
+                b. Sarah: Hey Mike, do you have any plans for the weekend?<br>
+                c. Mike: Actually, I'm thinking of going hiking in the mountains. Would you like to join me?
+            </div>
+            <div class="options">
+                <div class="option" onclick="check(this, 'A')">A. b-c-a</div>
+                <div class="option" onclick="check(this, 'B')">B. c-b-a</div>
+                <div class="option" onclick="check(this, 'C')">C. a-c-b</div>
+                <div class="option" onclick="check(this, 'D')">D. b-a-c</div>
+            </div>
+        </div>
+
+        <div class="question" data-ans="C">
+            <p><b>Question 37. Mark the best arrangement to make a meaningful letter:</b></p>
+            <div class="full-text-box">
+                <b>Dear John,</b><br>
+                a. Just yesterday, I witnessed something incredible — a local community story about an elderly man teaching free music lessons in the park went viral within hours.<br>
+                b. I hope this email finds you well! I wanted to share something fascinating about how social media has completely transformed our traditional news consumption.<br>
+                c. It started as a simple TikTok video and ended up being covered by major news networks! It really shows how the boundaries between mainstream media and social media have become beautifully blurred.<br>
+                d. You know how our grandparents used to wait for the morning newspaper? Now, my phone buzzes with breaking news before the ink would have even dried on those papers!<br>
+                e. What are your thoughts on this shift? Do you think we're better informed now, or are we just more overwhelmed with information? I'd love to hear your perspective on this! Best regards, LK
+            </div>
+            <div class="options">
+                <div class="option" onclick="check(this, 'A')">A. a-c-b-e-d</div>
+                <div class="option" onclick="check(this, 'B')">B. d-b-c-a-e</div>
+                <div class="option" onclick="check(this, 'C')">C. b-d-a-c-e</div>
+                <div class="option" onclick="check(this, 'D')">D. b-d-e-a-c</div>
+            </div>
+        </div>
+
+        <div class="question" data-ans="C">
+            <p><b>Question 38. Mark the best arrangement to make a meaningful text about AI:</b></p>
+            <div class="full-text-box">
+                a. In the future, AI will help solve major challenges in areas like climate change and space exploration. However, we must remember that AI should remain a tool to help humans, not replace them.<br>
+                b. Artificial Intelligence (AI) has become one of the most important technologies in modern life. From our phones to smart devices, AI helps us work, communicate, and solve everyday problems more efficiently.<br>
+                c. While AI offers many benefits, it also raises concerns about privacy, job losses, and ethical issues. As AI systems become more powerful, we need to ensure they are developed and used responsibly to benefit society.<br>
+                d. The growth of AI has created new opportunities in education and jobs. Schools are teaching AI-related skills, and companies need workers who understand this technology. This means people must learn new skills to stay competitive.<br>
+                e. AI applications can be found everywhere. In healthcare, it helps diagnose diseases; in business, it powers chatbots and analyzes data; and in transportation, it's developing self-driving cars. These advances are making our lives easier and more productive.
+            </div>
+            <div class="options">
+                <div class="option" onclick="check(this, 'A')">A. b-a-d-c-e</div>
+                <div class="option" onclick="check(this, 'B')">B. b-d-a-e-c</div>
+                <div class="option" onclick="check(this, 'C')">C. b-e-d-c-a</div>
+                <div class="option" onclick="check(this, 'D')">D. b-c-d-e-a</div>
+            </div>
+        </div>
+
+        <div class="question" data-ans="D">
+            <p><b>Question 39. Mark the best arrangement of utterances:</b></p>
+            <div class="full-text-box">
+                a. Emma: Have you tried that new Italian restaurant downtown? Everyone's talking about it.<br>
+                b. Emma: Good thinking! I'll call them now. What time works best for you?<br>
+                c. Emma: Why don't we check it out tonight? I've been craving Italian food lately.<br>
+                d. Tom: Sure, but we should probably make a reservation. It gets pretty crowded in the evening.<br>
+                e. Tom: Not yet, but I've heard their pasta is amazing. My colleague went there last week.
+            </div>
+            <div class="options">
+                <div class="option" onclick="check(this, 'A')">A. a-b-d-c-e</div>
+                <div class="option" onclick="check(this, 'B')">B. b-a-e-d-c</div>
+                <div class="option" onclick="check(this, 'C')">C. e-c-d-a-b</div>
+                <div class="option" onclick="check(this, 'D')">D. a-e-c-d-b</div>
+            </div>
+        </div>
+
+        <div class="question" data-ans="D">
+            <p><b>Question 40. Mark the best arrangement for Wildlife text:</b></p>
+            <div class="full-text-box">
+                a. Habitat destruction and poaching are the main challenges facing wildlife today. Forests are being cut down, oceans are getting polluted, and many animals are being hunted illegally for their valuable parts, pushing them toward extinction.<br>
+                b. Local communities play a vital role in wildlife protection. When people understand the importance of preserving nature and see the benefits of conservation, they become active participants in protecting local wildlife and their ecosystems.<br>
+                c. Conservation efforts worldwide have shown positive results through protected areas, breeding programs, and international cooperation. These initiatives have helped save several endangered species and preserve critical habitats for future generations.<br>
+                d. The future of wildlife depends on finding a balance between human needs and environmental protection. By working together and taking action now, we can help ensure the survival of Earth's diverse species for years to come.<br>
+                e. Wildlife conservation has become increasingly important in today's world. With growing human populations and development, many animal species are facing serious threats to their survival, making it crucial to protect them and their habitats.
+            </div>
+            <div class="options">
+                <div class="option" onclick="check(this, 'A')">A. c-b-a-e-d</div>
+                <div class="option" onclick="check(this, 'B')">B. b-e-c-a-d</div>
+                <div class="option" onclick="check(this, 'C')">C. e-d-a-b-c</div>
+                <div class="option" onclick="check(this, 'D')">D. e-a-c-b-d</div>
+            </div>
+        </div>
+
+        <div class="nav-btns"><button onclick="nextPage(4)">Quay lại</button><button onclick="finishExam()">NỘP BÀI</button></div>
+    </div>
+
+    <div id="page-result" class="page">
+        <h1>HOÀN THÀNH BÀI THI</h1>
+        <div id="result-display" style="text-align: center; font-size: 24px; margin-top: 30px;"></div>
+        <div style="text-align: center; margin-top: 50px;">
+            <button onclick="location.reload()">LÀM LẠI</button>
+        </div>
+    </div>
+
+    <script>
+        let score = 0;
+        let studentName = "";
+        let answeredQuestions = new Set();
+
+        function startQuiz() {
+            studentName = document.getElementById('student-name').value;
+            if(!studentName) { alert("Vui lòng nhập tên!"); return; }
+            nextPage(1);
+        }
+
+        function nextPage(num) {
+            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+            document.getElementById('page-' + num).classList.add('active');
+            window.scrollTo(0,0);
+        }
+
+        function check(element, choice) {
+            let qDiv = element.closest('.question');
+            let qId = qDiv.querySelector('b').innerText;
+            if(answeredQuestions.has(qId)) return;
+            let correctAns = qDiv.getAttribute('data-ans');
+            answeredQuestions.add(qId);
+            if(choice === correctAns) {
+                element.classList.add('correct');
+                score++;
+            } else {
+                element.classList.add('incorrect');
+            }
+            qDiv.querySelectorAll('.option').forEach(opt => opt.classList.add('locked'));
+        }
+
+        function finishExam() {
+            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+            document.getElementById('page-result').classList.add('active');
+            let finalPoint = (score / 40) * 10;
+            document.getElementById('result-display').innerHTML = `
+                <p>Học sinh: <b>${studentName}</b></p>
+                <p>Số câu đúng: <b>${score} / 40</b></p>
+                <p style="font-size: 35px; color: #1a73e8;">ĐIỂM: <b>${finalPoint.toFixed(2)}</b></p>
+            `;
+        }
+    </script>
+</body>
+</html>
